@@ -5,3 +5,7 @@
 [1. Conceitos Básicos de JS](js/introducao.md)
 
 [2. Usando JS para manipular o DOM](js/dom.md)
+
+## Projeto (Unidade 2)
+
+[Projeto](projeto/projeto.md)
