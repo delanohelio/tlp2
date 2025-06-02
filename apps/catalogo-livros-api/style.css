@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #f1f1f1;
     margin: 0;
     padding: 20px;
 }
@@ -8,34 +8,37 @@ body {
 .container {
     max-width: 700px;
     margin: auto;
-    background: white;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
 }
 
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
 input {
-    width: 70%;
-    padding: 10px;
-    margin-right: 10px;
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 8px 16px;
+    font-size: 16px;
 }
 
-#results {
-    margin-top: 20px;
-}
-
-.book {
+.livro {
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
 }
 
-.book h3 {
-    margin: 0;
+.livro h3 {
+    margin: 0 0 5px;
 }
 
-.book p {
-    margin: 4px 0;
+.livro p {
+    margin: 2px 0;
 }
