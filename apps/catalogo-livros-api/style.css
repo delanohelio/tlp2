@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.book {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.book h3 {
+    margin: 0;
+}
+
+.book p {
+    margin: 4px 0;
+}

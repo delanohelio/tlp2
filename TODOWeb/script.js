@@ -13,10 +13,13 @@ function renderTODOS(todos) {
     for (const todo of todos) {
         const itemDOM = document.createElement("li");
         itemDOM.textContent = todo.title;
-        itemDOM.setAttribute("name", todo.id)
-        if (todo.done) {
+
+        if(todo.done) {
             itemDOM.className = "done";
+        } else {
+            itemDOM.className = "";
         }
+
         todoListDOM.appendChild(itemDOM);
 
         const checkboxDOM = document.createElement("input");
@@ -28,29 +31,33 @@ function renderTODOS(todos) {
     }
 }
 
-function filterTODOS(event) {
-    const filterValue = event.target.value;
-    const filteredTODOS = todos.filter((todo) => {
-            return todo.title.toLowerCase().includes(filterValue.toLowerCase())
-    });
-    renderTODOS(filteredTODOS);
-}
-
 function changedCheckBox(event) {
     const itemDOM = event.target.parentElement;
-    const todoTarget = todos.find((element) => element.id == itemDOM.getAttribute("name"))
     if (event.target.checked) {
         itemDOM.className = "done";
-        todoTarget.done = true;
     } else {
         itemDOM.className = "";
-        todoTarget.done = false;
     }
-    console.log(todos);
 }
 
 
+function filterTODOS(event) {
+    const filterInputDOM = event.target;
+    const filterValue = filterInputDOM.value;
+
+    const filteredTodos = [];
+
+    for (todo of todos) {
+        if(todo.title.toLowerCase().includes(filterValue.toLowerCase())) {
+            filteredTodos.push(todo)
+        }
+    }
+
+    renderTODOS(filteredTodos);
+
+}
 
 renderTODOS(todos)
-document.getElementById("filter").addEventListener("input", filterTODOS);
 
+const filterElementDOM = document.getElementById("filter");
+filterElementDOM.addEventListener("input", filterTODOS);
