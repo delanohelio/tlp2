@@ -8,7 +8,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}`;
     fetch(url)
         .then(response => response.json())
-        .then(data => showBooks(data.docs))
+        .then(books => showBooks(books.docs))
         .catch(error => {
             console.error('Erro ao buscar livros:', error);
             alert('Erro ao buscar livros. Tente novamente mais tarde.');
@@ -28,10 +28,10 @@ function showBooks(books) {
         const div = document.createElement('div');
         div.className = 'book';
         div.innerHTML = `
-      <h3>${book.title}</h3>
-      <p><strong>Autor:</strong> ${book.author_name ? book.author_name.join(', ') : 'Desconhecido'}</p>
-      <p><strong>Ano:</strong> ${book.first_publish_year || 'N/A'}</p>
-    `;
-        results.appendChild(div);
+       <h3>${book.title}</h3>
+       <p><strong>Autor:</strong> ${book.author_name ? book.author_name.join("; ") : 'Desconhecido'}</p>
+       <p><strong>Ano:</strong> ${book.first_publish_year || 'N/A'}</p>
+     `;
+         results.appendChild(div);
     });
 }
