@@ -1,137 +1,119 @@
-# Semana 03 – Requisições com `fetch()`
+# Semana 03 – Requisições com `fetch()` e APIs Locais
 
-Nesta semana, vamos aprender como buscar dados externos em uma aplicação web utilizando **requisições HTTP** com `fetch()` — um recurso nativo do JavaScript moderno. Isso é fundamental para que as aplicações possam se comunicar com APIs (Application Programming Interfaces), que fornecem dados prontos em formato JSON.
+Nesta semana, vamos aprender como buscar e manipular dados em uma aplicação web utilizando **requisições HTTP** com `fetch()`. Isso é fundamental para que as aplicações possam se comunicar com APIs (Application Programming Interfaces).
 
----
+Vamos focar em como consumir uma **API local**, que simula um backend real, permitindo não apenas buscar dados, mas também adicionar e remover informações.
+
+-----
 
 ## 🎯 Objetivos da Semana
 
 - Compreender o que é uma API e seu papel no desenvolvimento web.
-- Realizar uma requisição do tipo GET utilizando `fetch()`.
-- Interpretar a resposta de uma API no formato JSON.
-- Exibir dinamicamente os dados retornados no HTML.
-- Utilizar `then()` e `catch()` com Promises.
-- (Extra) Utilizar `async/await` como alternativa moderna para requisições.
+- Realizar requisições do tipo **GET**, **POST** e **DELETE** utilizando `fetch()`.
+- Utilizar `async/await` como forma moderna de lidar com código assíncrono.
+- Interpretar dados no formato JSON.
+- Exibir, adicionar e remover dados dinamicamente no HTML.
+- Entender a utilidade de uma API local para desenvolvimento e testes.
 
----
+-----
 
 ## 📚 O que é uma API?
 
-Uma API (Interface de Programação de Aplicações) é uma ponte entre diferentes sistemas. Por exemplo, quando você busca um livro no Google ou Amazon, o sistema está se comunicando com uma **API de dados de livros**.
+Uma API (Interface de Programação de Aplicações) é uma ponte que permite a comunicação entre diferentes sistemas. No nosso caso, ela conecta nosso front-end (a página web) com um servidor de dados. As APIs geralmente retornam as informações no formato **JSON (JavaScript Object Notation)**, que é muito fácil de manipular com JavaScript.
 
-As APIs geralmente retornam as informações no formato **JSON (JavaScript Object Notation)**, que é fácil de manipular com JavaScript.
-
----
+-----
 
 ## 🔗 A API que vamos usar
 
-A API da [Open Library](https://openlibrary.org/developers/api) permite buscar livros por nome. Veja um exemplo de requisição com um livro:
+Nesta semana, usaremos uma API local através do `json-server`. Ela será executada a partir de um arquivo `db.json` e responderá no seguinte endereço:
 
-[https://openlibrary.org/search.json?q=harry+potter](https://openlibrary.org/search.json?q=harry+potter)
+[http://localhost:3000/livros](https://www.google.com/search?q=http://localhost:3000/livros)
 
+Usar uma API local é ótimo para desenvolver e testar nosso app sem depender de uma conexão com a internet ou de um serviço externo. Nosso `app.js` fará requisições para essa URL para buscar, adicionar e excluir livros.
 
-Essa URL retorna dados como título, autor e ano de publicação, tudo em formato JSON.
+-----
 
----
+## 🧪 Exemplo Básico com fetch()
 
-## 🧪 Exemplo Básico com `fetch()`
-
-```js
+```javascript
 fetch('https://openlibrary.org/search.json?q=javascript')
-  .then(response => response.json()) // converte a resposta em JSON
-  .then(data => console.log(data))   // exibe os dados no console
-  .catch(error => console.error('Erro:', error));
-````
+.then(response => response.json()) // converte a resposta em JSON
+.then(data => console.log(data))   // exibe os dados no console
+.catch(error => console.error('Erro:', error));
+```
+O fetch() retorna uma Promise, que é resolvida quando a resposta chega. Para tratar essa resposta, usamos o método .then().
 
-> O `fetch()` retorna uma **Promise**, que é resolvida quando a resposta chega. Para tratar essa resposta, usamos o método `.then()`.
+## 🧪 Exemplo com `async/await`
 
----
+A forma mais moderna e limpa de escrever requisições é com `async/await`. Veja como usamos para carregar a lista de livros da nossa API local:
 
-## 🔁 Alternativa moderna com `async/await`
+```javascript
+const URL_API = "http://localhost:3000/livros";
 
-A mesma lógica acima pode ser escrita de forma mais limpa com `async/await`, ideal para códigos mais longos:
-
-```js
-async function buscarLivros() {
-  try {
-    const resposta = await fetch('https://openlibrary.org/search.json?q=javascript');
-    const dados = await resposta.json();
-    console.log(dados);
-  } catch (erro) {
-    console.error('Erro na busca:', erro);
-  }
+async function carregarLivros() {
+    try {
+        const resposta = await fetch(URL_API);
+        const livros = await resposta.json();
+        renderizarLivros(livros);
+    } catch (erro) {
+        console.error("Erro ao carregar livros:", erro);
+    }
 }
 ```
 
-> `await` só pode ser usado dentro de funções `async`.
+> `await` só pode ser usado dentro de funções declaradas como `async`. Ele "pausa" a execução da função até que a `Promise` (a resposta do `fetch`) seja resolvida.
 
----
+-----
 
 ## 💻 Miniapp da Semana
 
-O miniapp que será construido em sala de aula é um **Catálogo de Livros**, onde o usuário digita um termo (por exemplo, "harry potter") e vê uma lista de livros relacionados.
+O miniapp que será construído em sala de aula é um **Gerenciador de Livros**, onde o usuário pode adicionar, visualizar e excluir livros de uma lista.
 
-🔗 Link para o projeto: [apps/catalogo-livros-api](../apps/catalogo-livros-api)
+🔗 **Link para o projeto:** [`apps/livros_js`](https://www.google.com/search?q=../apps/livros_js)
 
 ### Funcionalidades:
 
-* Campo de busca para o nome do livro.
-* Botão de "Buscar" que dispara a requisição.
-* Lista dos 10 primeiros resultados com:
+* Formulário para adicionar um novo livro (título e autor).
+* A lista de livros é carregada da API local assim que a página abre.
+* Novos livros são enviados para a API via requisição POST.
+* Cada livro na lista tem um botão "Excluir" que o remove da API (requisição DELETE) e da tela.
 
-    * Título do livro
-    * Autor
-    * Ano de publicação
-
----
+-----
 
 ## 📝 Atividade Prática (não vale nota)
 
-1. Crie o HTML com:
+1.  **Crie o HTML (`index.html`) com:**
 
-    * Um campo de entrada (`input`)
-    * Um botão de busca
-    * Uma `div` para exibir os resultados
+    * Um formulário (`<form>`) com dois campos de texto (`input`) para título e autor, e um botão `submit`.
+    * Uma lista não ordenada (`<ul>`) para exibir os livros.
 
-2. No JavaScript:
+2.  **No JavaScript (`app.js`):**
 
-    * Faça a requisição à API usando `fetch()` ou `async/await`
-    * Extraia do JSON os dados desejados
-    * Crie elementos HTML dinamicamente com `document.createElement()` para mostrar os dados
+    * Defina a `URL_API` como uma constante.
+    * Crie a função `carregarLivros` para buscar os dados com `fetch` (GET).
+    * Crie a função `adicionarLivro` que envia um novo livro usando `fetch` com o método `POST`.
+    * Crie a função `excluirLivro` que recebe um `id` e usa `fetch` com o método `DELETE`.
+    * Adicione um `addEventListener` ao formulário para o evento `submit`, que chamará a função `adicionarLivro`.
 
-3. Use `textContent` ou `innerHTML` para colocar os textos no HTML.
+3.  **Para renderizar:**
 
----
+    * Crie uma função `renderizarLivros` que limpa a lista atual e a preenche com os dados vindos da API, criando os elementos `<li>` dinamicamente.
 
-## 🧠 Dicas para a Aula
-
-* Teste primeiro a URL no navegador e veja o JSON.
-* Inspecione os dados retornados com `console.log()`.
-* Trabalhe com o método `Array.slice(0, 10)` para limitar os resultados.
-
----
+-----
 
 ## 🎯 Desafio
 
-Ao final da semana, tente adaptar o app para:
+Ao final da semana, tente adaptar o app para incluir a funcionalidade de **Editar** um livro. Isso exigirá:
 
-* Mostrar uma mensagem de erro caso a API esteja fora do ar.
-* Incluir uma imagem da capa do livro (se disponível).
+1.  Adicionar um botão "Editar" em cada item da lista.
+2.  Ao clicar, talvez os dados do livro apareçam novamente no formulário para edição.
+3.  Fazer uma requisição com o método `PUT` ou `PATCH` para a API para salvar as alterações.
 
-> Dica: a capa pode ser acessada pela URL:
-> `https://covers.openlibrary.org/b/id/[cover_i]-M.jpg` (se `cover_i` existir no item).
+-----
 
----
+📁 **Veja os arquivos do miniapp no repositório:**
 
-## 🧩 Para casa (opcional)
-
-* Experimente trocar a API da OpenLibrary por outra API pública (como a de filmes do OMDB).
-* Pesquise como lidar com APIs que exigem chave de autenticação.
-
----
-
-📁 Veja os arquivos do miniapp no repositório:
-
-* [index.html](../apps/catalogo-livros-api/index.html)
-* [style.css](../apps/catalogo-livros-api/style.css)
-* [script.js](../apps/catalogo-livros-api/script.js)
+* [`index.html`](https://www.google.com/search?q=../apps/livros_js/index.html)
+* [`styles.css`](https://www.google.com/search?q=../apps/livros_js/styles.css)
+* [`app.js`](https://www.google.com/search?q=../apps/livros_js/app.js)
+* [`db.json`](https://www.google.com/search?q=../apps/livros_js/db.json)
