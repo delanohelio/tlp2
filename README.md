@@ -4,19 +4,19 @@ Este repositório reúne os materiais, exemplos e atividades da disciplina **Té
 
 ## 📅 Cronograma de Conteúdo
 
-| Semana | Datas         | Tópico                                                           | Miniapp / Atividade Prática                   |
-| :----- | :------------ | :--------------------------------------------------------------- |:----------------------------------------------|
-| 1      | 20/05–24/05   | ✅ Introdução a HTML, CSS e JS                                   | `apps/todo-simples`                           |
-| 2      | 27/05–31/05   | ✅ DOM e eventos                                                 | `apps/todo-avancado`                          |
-| 3      | 02/06–06/06   | ✅ Requisições `fetch()` e APIs Locais                             | `apps/livros_js`                              |
-| 4      | 09/06–13/06   | **Exercício Avaliativo 1** | **Gerenciador de Tarefas**                    |
-| 5      | 16/06–20/06   | Introdução ao Vue.js                                             | `apps/todo-vue`                               |
-| 6      | 23/06–27/06   | Reatividade e Propriedades Computadas no Vue                     | `apps/imc-vue`                                |
-| 7      | 30/06–04/07   | Vue.js + API Externa                                             | `apps/previsao-tempo-vue`                     |
+| Semana | Datas         | Tópico                                                                  | Miniapp / Atividade Prática                   |
+| :----- | :------------ |:------------------------------------------------------------------------|:----------------------------------------------|
+| 1      | 20/05–24/05   | ✅ [Introdução a HTML, CSS e JS](conteudos/intro_html_css_js.md)         | `apps/todo-simples`                           |
+| 2      | 27/05–31/05   | ✅ [DOM e eventos](conteudos/dom.md)                                     | `apps/todo-avancado`                          |
+| 3      | 02/06–06/06   | ✅ [Requisições `fetch()` e APIs Locais](conteudos/fetch.md)             | `apps/livros_js`                              |
+| 4      | 09/06–13/06   | **Exercício Avaliativo 1**                                              | [**Gerenciador de Tarefas**](exercicios/exercicio_1.md)                |
+| 5      | 16/06–20/06   | [Introdução ao Vue.js](conteudos/vue_intro.md)                          | `apps/todo-vue`                               |
+| 6      | 23/06–27/06   | Reatividade e Propriedades Computadas no Vue                            | `apps/imc-vue`                                |
+| 7      | 30/06–04/07   | Vue.js + API Externa                                                    | `apps/previsao-tempo-vue`                     |
 | 8      | 07/07–11/07   | Conteúdo: Tópicos Avançados de Reatividade / **Exercício Avaliativo 2** | **App com API Externa** (baseado na semana 7) |
-| —      | 14/07–18/07   | **Recesso Escolar** | —                                             |
-| 9      | 21/07–25/07   | Prática Guiada: App com Múltiplos Estados                        | `apps/carrinho-compras-simples`               |
-| 10     | 28/07–01/08   | Conteúdo: Revisão Final / **Exercício Avaliativo 3** | **A definir com a turma**                     |
+| —      | 14/07–18/07   | **Recesso Escolar**                                                     | —                                             |
+| 9      | 21/07–25/07   | Prática Guiada: App com Múltiplos Estados                               | `apps/carrinho-compras-simples`               |
+| 10     | 28/07–01/08   | Conteúdo: Revisão Final / **Exercício Avaliativo 3**                    | **A definir com a turma**                     |
 
 ## ✅ Avaliações
 
