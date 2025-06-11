@@ -22,7 +22,7 @@ Este repositório reúne os materiais, exemplos e atividades da disciplina **Té
 
 A avaliação da disciplina será composta por 3 exercícios práticos individuais, que serão desenvolvidos durante um dos encontros síncronos da semana indicada:
 
-1.  **Exercício Avaliativo 1 (Semana 4):**
+1.  [**Exercício Avaliativo 1 (Semana 4):**](exercicios/exercicio_1.md)
     * **Tópico:** JavaScript Puro + CRUD.
     * **Projeto:** Desenvolvimento de um "Gerenciador de Tarefas" completo, consumindo uma API local com `json-server` para criar, ler e deletar dados.
 
