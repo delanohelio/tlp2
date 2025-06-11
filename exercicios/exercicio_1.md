@@ -33,6 +33,7 @@ Construir uma aplicação web completa do tipo CRUD (Create, Read, Update, Delet
     ```
 * Abra o terminal, navegue até a pasta do projeto e inicie a API local com o comando: `json-server --watch db.json`.
 * A API estará disponível em `http://localhost:3000/termos`.
+* Foi publicada uma API no seguinte endereço: `http://172.16.36.31:5000/termos`
 
 _Conteúdo extra sobre como instalar e usar o json-server neste [link](../conteudos/extra/json-server.md)_
 
