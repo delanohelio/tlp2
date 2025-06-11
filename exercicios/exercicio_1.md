@@ -177,6 +177,7 @@ form button {
 ```javascript
 // Define a URL base da API
 const URL_API = "http://localhost:3000/termos";
+// const URL_API = "http://172.16.36.31:5000/termos" 
 
 // Seleciona os elementos do DOM
 const listaTermos = document.getElementById("lista-termos");
