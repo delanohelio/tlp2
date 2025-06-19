@@ -9,7 +9,7 @@ Este repositório reúne os materiais, exemplos e atividades da disciplina **Té
 | 1      | 20/05–24/05   | ✅ [Introdução a HTML, CSS e JS](conteudos/intro_html_css_js.md)         | `apps/todo-simples`                                     |
 | 2      | 27/05–31/05   | ✅ [DOM e eventos](conteudos/dom.md)                                     | `apps/todo-avancado`                                    |
 | 3      | 02/06–06/06   | ✅ [Requisições `fetch()` e APIs Locais](conteudos/fetch.md)             | `apps/livros_js`                                        |
-| 4      | 09/06–13/06   | **Estudo dirigido por Exercício**                                       | [**Gerenciador de Tarefas**](exercicios/exercicio_0.md) |
+| 4      | 09/06–13/06   | ✅ Estudo dirigido por Exercício                                         | [**Gerenciador de Tarefas**](exercicios/exercicio_0.md) |
 | 5      | 16/06–20/06   | [Introdução ao Vue.js](conteudos/vue_intro.md)                          | `apps/todo-vue`                                         |
 | 6      | 23/06–27/06   | Reatividade e Propriedades Computadas no Vue                            | `apps/imc-vue`                                          |
 | 7      | 30/06–04/07   | Vue.js + API Externa                                                    | `apps/previsao-tempo-vue`                               |
