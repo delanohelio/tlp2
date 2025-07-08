@@ -30,6 +30,7 @@ A avaliação da disciplina será composta por 3 exercícios práticos individua
 2.  **Exercício Avaliativo 2 (Semana 8):**
     * **Tópico:** Vue.js + API Externa.
     * **Projeto:** Criação de uma aplicação que consome uma API pública (como a de previsão do tempo ou de filmes) para buscar e exibir dados de forma reativa, aplicando os conceitos vistos na semana anterior.
+    * Links: [Exercício para 3A](exercicios/exercicio_2a.md) | [Exercício para 3B](exercicios/exercicio_2b.md)
 
 3.  **Exercício Avaliativo 3 (Semana 10):**
     * **Tópico:** Aplicação Vue.js com Reatividade Complexa.
