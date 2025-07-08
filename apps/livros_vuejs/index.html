@@ -11,28 +11,33 @@
 <div id="app" class="container">
     <h1>📚 Catálogo de Livros</h1>
 
-    <form id="form-livro" @submit="adicionarLivro">
-        <input v-model="novoTitulo" type="text" placeholder="Título do livro" required>
-        <input v-model="novoAutor" type="text" placeholder="Autor do livro" required>
+    <form @submit="adicionarLivro">
+        <input type="text" v-model="novoTitulo" placeholder="Título do Livro" required>
+        <input type="text" v-model="novoAutor" placeholder="Autor do Livro" required>
         <button type="submit">Adicionar</button>
     </form>
 
+    <p>{{bibliografia}}</p>
+
     <p v-if="livros.length > 1">
-        Temos {{ livros.length }} livros cadastrados.
+        Temos {{livros.length}} livros cadastrados
     </p>
     <p v-else-if="livros.length === 1">
-        Temos {{ livros.length }} livro cadastrado.
+        Temos {{livros.length}} livro cadastrado
     </p>
     <p v-else>
-        Nenhum livro cadastrado ainda.
+        Nenhum livro cadastrado
     </p>
 
+    <p>{{bibliografia}}</p>
+
     <ul>
-        <li v-for="livro in livros" :key="livro.id">
+        <li v-for="livro in livros" key="livro.id">
             <span>{{livro.titulo}} - {{livro.autor}}</span>
             <button @click="excluirLivro(livro)">Excluir</button>
         </li>
     </ul>
+
 </div>
 
 <script src="vue.js"></script>

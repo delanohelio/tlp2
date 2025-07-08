@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Contatos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app" class="container">
+    <h1>👥 Meus Contatos</h1>
+
+    <div v-if="erro" class="erro-class">
+        <p>{{erro}} <button @click="fecharErro">X</button></p>
+
+    </div>
+
+    <form id="form-contato" @submit.prevent="addContato">
+        <input type="text" v-model="novoNome" placeholder="Nome completo" required>
+        <input type="email" v-model="novoEmail" placeholder="E-mail" required>
+        <input type="tel" v-model="novoTelefone" placeholder="Telefone" required>
+        <button type="submit">Adicionar Contato</button>
+    </form>
+
+    <div v-if="isLoading">
+        <p>Carregando...</p>
+    </div>
+
+    <div v-else>
+        <h2>Lista de Contatos</h2>
+        <div v-for="contato in contatos" class="card-contato">
+            <div class="info-contato">
+                <p><strong>{{contato.nome}}</strong></p>
+                <p>{{contato.email}}</p>
+                <p>{{contato.telefone}}</p>
+                <button class="btn-excluir" @click="deletarContato(contato.id)">Deletar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
