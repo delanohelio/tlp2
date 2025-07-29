@@ -4,19 +4,19 @@ Este repositório reúne os materiais, exemplos e atividades da disciplina **Té
 
 ## 📅 Cronograma de Conteúdo
 
-| Semana | Datas         | Tópico                                                                                               | Miniapp / Atividade Prática                             |
-| :----- | :------------ |:-----------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
-| 1      | 20/05–24/05   | ✅ [Introdução a HTML, CSS e JS](conteudos/intro_html_css_js.md)                                      | `apps/todo-simples`                                     |
-| 2      | 27/05–31/05   | ✅ [DOM e eventos](conteudos/dom.md)                                                                  | `apps/todo-avancado`                                    |
-| 3      | 02/06–06/06   | ✅ [Requisições `fetch()` e APIs Locais](conteudos/fetch.md)                                          | `apps/livros_js`                                        |
-| 4      | 09/06–13/06   | ✅ Estudo dirigido por Exercício                                                                      | [**Gerenciador de Tarefas**](exercicios/exercicio_0.md) |
-| 5      | 16/06–20/06   | ✅ [Introdução ao Vue.js](conteudos/vue_intro.md)                                                     | `apps/todo-vue`                                         |
-| 6      | 23/06–27/06   | [Reatividade e Propriedades Computadas no Vue](conteudos/vue_reatividade.md)                         | `apps/imc-vue`                                          |
-| 7      | 30/06–04/07   | [Vue.js + API Externa](conteudos/vue_api.md)                                                         | `apps/previsao-tempo-vue`                               |
-| 8      | 07/07–11/07   | Conteúdo: Tópicos Avançados de Reatividade / **Exercício Avaliativo 2**                              | **App com API Externa** (baseado na semana 7)           |
-| —      | 14/07–18/07   | **Recesso Escolar**                                                                                  | —                                                       |
-| 9      | 21/07–25/07   | [Criando uma Aplicação com Múltiplas Páginas e Compartilhando Dados](conteudos/vue_multi_paginas.md) | [Mini E-Commerce](conteudos/mini_ecommerce.md)          |
-| 10     | 28/07–01/08   | Conteúdo: Revisão Final / **Exercício Avaliativo 3**                                                 | **A definir com a turma**                               |
+| Semana | Datas         | Tópico                                                                                                       | Miniapp / Atividade Prática                             |
+| :----- | :------------ |:-------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
+| 1      | 20/05–24/05   | ✅ [Introdução a HTML, CSS e JS](conteudos/intro_html_css_js.md)                                              | `apps/todo-simples`                                     |
+| 2      | 27/05–31/05   | ✅ [DOM e eventos](conteudos/dom.md)                                                                          | `apps/todo-avancado`                                    |
+| 3      | 02/06–06/06   | ✅ [Requisições `fetch()` e APIs Locais](conteudos/fetch.md)                                                  | `apps/livros_js`                                        |
+| 4      | 09/06–13/06   | ✅ Estudo dirigido por Exercício                                                                              | [**Gerenciador de Tarefas**](exercicios/exercicio_0.md) |
+| 5      | 16/06–20/06   | ✅ [Introdução ao Vue.js](conteudos/vue_intro.md)                                                             | `apps/todo-vue`                                         |
+| 6      | 23/06–27/06   | [Reatividade e Propriedades Computadas no Vue](conteudos/vue_reatividade.md)                                 | `apps/imc-vue`                                          |
+| 7      | 30/06–04/07   | [Vue.js + API Externa](conteudos/vue_api.md)                                                                 | `apps/previsao-tempo-vue`                               |
+| 8      | 07/07–11/07   | Conteúdo: Tópicos Avançados de Reatividade / **Exercício Avaliativo 2**                                      | **App com API Externa** (baseado na semana 7)           |
+| —      | 14/07–18/07   | **Recesso Escolar**                                                                                          | —                                                       |
+| 9      | 21/07–25/07   | [Criando uma Aplicação com Múltiplas Páginas e Compartilhando Dados](conteudos/vue_multi_paginas.md)         | [Mini E-Commerce](conteudos/mini_ecommerce.md)          |
+| 10     | 28/07–01/08   | Conteúdo: [Revisão - Apps Multiplas Páginas](conteudos/vue_pratica_playlist.md) / **Exercício Avaliativo 3** | **A definir com a turma**                               |
 
 ## ✅ Avaliações
 
