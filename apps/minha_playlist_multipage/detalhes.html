@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Música</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="container">
+    <header>
+        <a href="index.html">← Voltar para a Playlist</a>
+    </header>
+
+    <div class="feedback-area">
+        <p v-if="isLoading">Carregando detalhes...</p>
+        <p v-if="erro" class="erro">{{erro}}</p>
+    </div>
+
+    <div v-if="musica" class="details-card">
+        <h2>{{musica.titulo}}</h2>
+        <p class="artist">Artista: {{musica.artista}}</p>
+        <span class="genre">Gênero: {{musica.genero}}</span>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="js/detalhes.js"></script>
+</body>
+</html>

@@ -16,7 +16,7 @@ Este repositório reúne os materiais, exemplos e atividades da disciplina **Té
 | 8      | 07/07–11/07   | Conteúdo: Tópicos Avançados de Reatividade / **Exercício Avaliativo 2**                                      | **App com API Externa** (baseado na semana 7)           |
 | —      | 14/07–18/07   | **Recesso Escolar**                                                                                          | —                                                       |
 | 9      | 21/07–25/07   | [Criando uma Aplicação com Múltiplas Páginas e Compartilhando Dados](conteudos/vue_multi_paginas.md)         | [Mini E-Commerce](conteudos/mini_ecommerce.md)          |
-| 10     | 28/07–01/08   | Conteúdo: [Revisão - Apps Multiplas Páginas](conteudos/vue_pratica_playlist.md) / **Exercício Avaliativo 3** | **A definir com a turma**                               |
+| 10     | 28/07–01/08   | Conteúdo: [Revisão - Apps Multiplas Páginas](conteudos/vue_pratica_playlist.md) / **Exercício Avaliativo 3** | **[Minha Playlist](apps/minha_playlist_multipage)**     |
 
 ## ✅ Avaliações
 

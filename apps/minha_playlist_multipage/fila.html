@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fila de Reprodução</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="container">
+    <header>
+        <h1>🎧 Fila de Reprodução</h1>
+        <a href="index.html">← Voltar para a Playlist</a>
+    </header>
+
+    <div v-if="fila.length > 0">
+        <ul class="music-list">
+            <li v-for="musica in fila" :key="musica.id" class="music-item">
+                <div class="music-info">
+                    <span class="title">{{musica.titulo}}</span>
+                    <span class="artist">{{musica.artista}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div v-else>
+        <p>Sua fila de reprodução está vazia.</p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="js/fila.js"></script>
+</body>
+</html>

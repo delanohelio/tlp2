@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Playlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="container">
+    <header>
+        <h1>🎵 Minha Playlist</h1>
+        <a href="fila.html">Fila de Reprodução ({{fila.length}})</a>
+    </header>
+
+    <div class="feedback-area">
+        <p v-if="isLoading">Carregando músicas...</p>
+        <p v-if="erro" class="erro">{{erro}}</p>
+    </div>
+
+    <ul class="music-list">
+        <li v-for="musica in musicas" :key="musica.id" class="music-item">
+            <div class="music-info">
+                <span class="title">{{musica.titulo}}</span>
+                <span class="artist">{{musica.artista}}</span>
+            </div>
+            <div class="music-actions">
+                <a class="btn-details" :href="'detalhes.html?id=' + musica.id">Ver Detalhes</a>
+                <button class="btn-add-queue" @click="adicionarAFila(musica)">Adicionar à Fila</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
