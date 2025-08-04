@@ -33,8 +33,8 @@ A avaliação da disciplina será composta por 3 exercícios práticos individua
     * Links: [Exercício para 3A](exercicios/exercicio_2a.md) | [Exercício para 3B](exercicios/exercicio_2b.md)
 
 3.  **Exercício Avaliativo 3 (Semana 10):**
-    * **Tópico:** Aplicação Vue.js com Reatividade Complexa.
-    * **Projeto:** O tema será definido em conjunto, mas o foco será criar uma aplicação interativa que gerencie um estado mais complexo (ex: um quiz, um carrinho de compras simples, um montador de pizza, etc.).
+    * **Tópico:** Aplicação Vue.js com Múltiplas Páginas.
+    * Links: [Exercício para 3A](exercicios/exercicio_3a.md) | [Exercício para 3B](exercicios/exercicio_3b.md)    
 
 ## 🚀 Tecnologias Utilizadas
 
